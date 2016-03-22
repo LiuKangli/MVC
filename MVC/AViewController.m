@@ -7,8 +7,8 @@
 //
 
 #import "AViewController.h"
-
-@interface AViewController ()
+#import "buttonView.h"
+@interface AViewController ()<buttonDelegate>
 
 @end
 
@@ -16,17 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIButton *bu = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 50, 50)];
-    bu.backgroundColor = [UIColor whiteColor];
-    [bu setTitle:_name forState:UIControlStateNormal];
-    [bu setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [bu addTarget:self action:@selector(go) forControlEvents:UIControlEventTouchDown];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    buttonView *bu = [[buttonView alloc]initWithFrame:CGRectMake(0, 200, 200, 100)];
+    bu.deleGate = self;
     [self.view addSubview:bu];
-    // Do any additional setup after loading the view.
+
 }
--(void)go{
-    [self dismissViewControllerAnimated:YES completion:nil];
+-(void)setButton:(NSString *)se{
+    NSLog(@"biubiubiu%@",se);
+     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

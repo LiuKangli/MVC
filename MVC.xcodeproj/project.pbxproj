@@ -29,6 +29,7 @@
 		735773A91C9A5E720000CD54 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 7357739E1C9A5E720000CD54 /* AFURLRequestSerialization.m */; };
 		735773AA1C9A5E720000CD54 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 735773A01C9A5E720000CD54 /* AFURLResponseSerialization.m */; };
 		735773AB1C9A5E720000CD54 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 735773A21C9A5E720000CD54 /* AFURLSessionManager.m */; };
+		73EC2B0E1CA1219B00E7E9D3 /* buttonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73EC2B0D1CA1219B00E7E9D3 /* buttonView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,8 @@
 		735773A01C9A5E720000CD54 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		735773A11C9A5E720000CD54 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		735773A21C9A5E720000CD54 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		73EC2B0C1CA1219B00E7E9D3 /* buttonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buttonView.h; sourceTree = "<group>"; };
+		73EC2B0D1CA1219B00E7E9D3 /* buttonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = buttonView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +215,7 @@
 				735773511C9A4ED60000CD54 /* ViewController.m */,
 				7357738C1C9A5D620000CD54 /* AViewController.h */,
 				7357738D1C9A5D620000CD54 /* AViewController.m */,
+				73EC2B0B1CA1218200E7E9D3 /* buttonView */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -240,6 +244,15 @@
 				735773A21C9A5E720000CD54 /* AFURLSessionManager.m */,
 			);
 			path = AFNetworking1;
+			sourceTree = "<group>";
+		};
+		73EC2B0B1CA1218200E7E9D3 /* buttonView */ = {
+			isa = PBXGroup;
+			children = (
+				73EC2B0C1CA1219B00E7E9D3 /* buttonView.h */,
+				73EC2B0D1CA1219B00E7E9D3 /* buttonView.m */,
+			);
+			name = buttonView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +400,7 @@
 				7357734C1C9A4ED60000CD54 /* main.m in Sources */,
 				735773A51C9A5E720000CD54 /* AFHTTPSessionManager.m in Sources */,
 				735773821C9A4FB10000CD54 /* List_TableViewController.m in Sources */,
+				73EC2B0E1CA1219B00E7E9D3 /* buttonView.m in Sources */,
 				735773A61C9A5E720000CD54 /* AFNetworkReachabilityManager.m in Sources */,
 				735773A41C9A5E720000CD54 /* AFHTTPRequestOperationManager.m in Sources */,
 			);
@@ -614,6 +628,7 @@
 				735773761C9A4ED60000CD54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		735773771C9A4ED60000CD54 /* Build configuration list for PBXNativeTarget "MVCTests" */ = {
 			isa = XCConfigurationList;
@@ -622,6 +637,7 @@
 				735773791C9A4ED60000CD54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7357737A1C9A4ED60000CD54 /* Build configuration list for PBXNativeTarget "MVCUITests" */ = {
 			isa = XCConfigurationList;
@@ -630,6 +646,7 @@
 				7357737C1C9A4ED60000CD54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

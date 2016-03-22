@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TeacherModel.h"
 @interface TableViewCell : UITableViewCell
+
 @property (nonatomic,strong) TeacherModel *model;
 
 @property (weak, nonatomic) IBOutlet UILabel *name;
@@ -16,5 +17,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *arera;
 @property (weak, nonatomic) IBOutlet UILabel *expecily;
 @property (weak, nonatomic) IBOutlet UILabel *work;
+//每个cell的高度
 @property (nonatomic,assign) CGFloat hight;
 @end

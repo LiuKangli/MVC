@@ -14,7 +14,7 @@
 #import "AFNetworking.h"
 #import "AFHTTPRequestOperationManager.h"
 
-#define MainUrl @"接口换一个就OK了"
+#define MainUrl @"http://qiankesong.vicp.cc:8057/"
 #define  he @"index.php/api/get/coacher_list"
 @interface ViewController ()<tableViewDelegatee>{
     NSMutableArray*arrayM;

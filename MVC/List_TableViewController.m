@@ -25,12 +25,12 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
+
     return self.dataArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
+
     return 1;
 }
 
@@ -40,6 +40,7 @@
         cell = [[[NSBundle mainBundle]loadNibNamed:@"TableViewCell" owner:self options:nil]lastObject];
     }
     TeacherModel *mode = self.dataArray[indexPath.row];
+    NSLog(@"dd%@",self.dataArray[indexPath.row]);
     cell.model = mode;
     self.rowHeight = cell.hight;
     // Configure the cell...
