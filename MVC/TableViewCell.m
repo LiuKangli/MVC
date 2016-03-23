@@ -14,6 +14,7 @@
     // Initialization code
 }
 -(void)setModel:(TeacherModel *)model{
+    NSLog(@"咻咻%@",model.coacher_name);
     _name.text = model.coacher_name;
     _sex.text = model.user_sex;
     _arera.text = model.area;

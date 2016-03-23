@@ -18,7 +18,9 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    buttonView *bu = [[buttonView alloc]initWithFrame:CGRectMake(0, 200, 200, 100)];
+    buttonView *bu = [[buttonView alloc]initWithFrame:CGRectMake(210, 200, 200, 100)];
+    [bu.button setTitle:_name forState:UIControlStateNormal];
+    bu.button.titleLabel.textAlignment = NSTextAlignmentRight;
     bu.deleGate = self;
     [self.view addSubview:bu];
 

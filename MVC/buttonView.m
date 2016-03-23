@@ -12,11 +12,11 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self) {
         self = [super initWithFrame:frame];
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.bounds = self.bounds;
-        button.backgroundColor = [UIColor greenColor];
-        [button addTarget:self action:@selector(go) forControlEvents:UIControlEventTouchDown];
-        [self addSubview:button];
+        _button = [UIButton buttonWithType:UIButtonTypeCustom];
+        _button.bounds = self.bounds;
+        _button.backgroundColor = [UIColor greenColor];
+        [_button addTarget:self action:@selector(go) forControlEvents:UIControlEventTouchDown];
+        [self addSubview:_button];
         _string = @"123";
         
     }

@@ -11,8 +11,8 @@
 #import "TableViewCell.h"
 #import "TeacherModel.h"
 #import "AViewController.h"
-#import "AFNetworking.h"
-#import "AFHTTPRequestOperationManager.h"
+
+#import "NetWork.h"
 
 #define MainUrl @"http://qiankesong.vicp.cc:8057/"
 #define  he @"index.php/api/get/coacher_list"
@@ -39,25 +39,23 @@
 -(void)getData{
     NSString *str = [MainUrl stringByAppendingString:he];
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:@"武汉市",@"city_name", nil];
-    AFHTTPRequestOperationManager *man = [AFHTTPRequestOperationManager manager];
-    man.responseSerializer = [AFHTTPResponseSerializer serializer];
-    man.responseSerializer.acceptableContentTypes = [man.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     
-    [man POST:str parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSMutableDictionary *data = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
-        if ([[data objectForKey:@"message"]isEqualToString:@"success"]) {
-            NSMutableArray *dd = [data objectForKey:@"results"];
+    NetWork *net = [[NetWork alloc]init];
+    [net seturl:str parameter:dic];
+    net.name = ^(NSDictionary *dicc){
+        if ([[dicc objectForKey:@"message"]isEqualToString:@"success"]) {
+            NSMutableArray *dd = [dicc objectForKey:@"results"];
             for (NSDictionary *dic in dd) {
                 [arrayM addObject:[TeacherModel dataWithDic:dic]];
-//                TableViewCell *cel = [[TableViewCell alloc]init];
-//                [cellArray addObject:cel];//有刷新 加这个方法  tableview里面传入数据的方法要加入cell的数据
+                //                TableViewCell *cel = [[TableViewCell alloc]init];
+                //                [cellArray addObject:cel];//有刷新 加这个方法  tableview里面传入数据的方法要加入cell的数据
             }
             [list dataWithArray:arrayM];
             [list reloadData];
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
-    }];
+ 
+    };
+    
     
 }
 //cell点击跳转

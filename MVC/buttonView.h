@@ -19,4 +19,5 @@
 @interface buttonView : UIView
 @property (nonatomic,strong) id<buttonDelegate>deleGate;
 @property (nonatomic,copy) NSString *string;
+@property (nonatomic,strong) UIButton *button;
 @end
